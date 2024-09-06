@@ -15,3 +15,9 @@ function digitalRoot(n) {
 
   return sum.toString().length == 1 ? sum : digitalRoot(sum) 
 }
+
+// the best one
+
+function bestSolution(n){
+  return (n - 1) % 9 + 1;
+}
