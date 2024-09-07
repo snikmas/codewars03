@@ -9,15 +9,11 @@
 
 
 function humanReadable (seconds) {
-  let h = 0; 
-  let m = 0;
-  let s = 0;
   
-  m = Math.floor(seconds / 60);
-  s = seconds % 60;
-  
-  h = Math.floor(m / 60);
-  m = m % 60;
+  let h = Math.floor(seconds / 3600);
+  let m = Math.floor(seconds / 60 % 60);
+  let s = seconds % 60;
+
   return [h.toString().padStart(2, '0'), m.toString().padStart(2,'0'), s.toString().padStart(2, '0')].join(':')
 }
 
